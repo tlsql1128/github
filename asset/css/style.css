@@ -1,5 +1,11 @@
 @import url('commons.css');
 
+@font-face {
+    font-family: 'RixInuaridurine';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
 body{
     font-size: 16px;
 }
@@ -40,6 +46,10 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 19rem;
+}
+
+.kv .tit{
+    font-family: 'RixInuaridurine';
 }
 
 /* 로고 */
