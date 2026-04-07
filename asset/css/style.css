@@ -48,8 +48,8 @@ header{
     padding: 1.25rem 19rem;
 }
 
-.kv .tit{
-    font-family: 'RixInuaridurine';
+.kv .tit h1{
+    font-family: 'RixInuaridurine' !important;
 }
 
 /* 로고 */
