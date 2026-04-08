@@ -11,23 +11,37 @@
 </head>
 
 <body>
+    <!-- 반응형 메뉴 리팩토링. 메뉴 및 버튼 구조 개선, aria-label 등 접근성 추가, 토글 준비 -->
     <header class="kv-header">
         <div class="logo">
-            <img src="asset/images/kv_logo.svg" alt="">
+            <a href="/">
+                <img src="asset/images/kv_logo.svg" alt="WASH FACTORY 로고">
+            </a>
         </div>
-
-        <nav class="navi">
+        <button class="menu-btn" id="menuToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+            <img src="asset/images/icon/menu.png" alt="메뉴 아이콘">
+        </button>
+        <nav class="navi" id="mainNav">
             <a href="#">창업안내</a>
             <a href="#">워시팩토리</a>
             <a href="#">장비안내</a>
             <a href="#">창업절차</a>
             <a href="#">창업문의</a>
-            <a href="#">Q&A</a>
+            <a href="#">Q&amp;A</a>
         </nav>
-        <button class="menu-btn">
-            <img src="asset/images/icon/menu.png" alt=""></button>
-        <div class="clear"></div>
     </header>
+    <script>
+        // 간단한 반응형 토글 스크립트 (inline 혹은 분리 사용)
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.getElementById('menuToggle');
+            const nav = document.getElementById('mainNav');
+            menuBtn.addEventListener('click', function () {
+                const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                menuBtn.setAttribute('aria-expanded', !expanded);
+                nav.classList.toggle('open');
+            });
+        });
+    </script>
     <section class="kv">
         <div class="kv-tit">
             <div class="tit">
@@ -262,12 +276,14 @@
     <!-- washer END-->
 
     <section class="equipment">
-        <h3>워시팩토리 장비소개</h3>
+        <div class="equipment-title">
+            <h3>워시팩토리 장비소개</h3>
+        </div>
         <div class="equipment1">
             <img src="asset/images/Equipment1.png" alt="세탁기">
             <div class="equipment-inner">
                 <div class="equipment-tit">
-                    <p>HERB - SWH</p>
+                    <p class="equipment-point">HERB - SWH</p>
                     <h3>허브 중형 세탁기</h3>
                     <p>SPECIFICATION</p>
                 </div>
@@ -291,7 +307,7 @@
             <img src="asset/images/Equipment2.png" alt="건조기">
             <div class="equipment-inner">
                 <div class="equipment-tit">
-                    <p>HERB - HG</p>
+                    <p class="equipment-point">HERB - HG</p>
                     <h3>허브 2단 건조기</h3>
                     <p>SPECIFICATION</p>
                 </div>
@@ -308,6 +324,84 @@
                         <p>880 x 1090 x 2070</p>
                         <p>320Kg</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- equipment END -->
+
+    <section class="procedure">
+        <div class="procedure-title">
+            <h3>창업절차</h3>
+            <p>상권 분석부터 사업성 검토까지, 성공 창업을 위한<br> 든든한 파트너가 되겠습니다.</p>
+        </div>
+        <div class="procedure-inner">
+            <div class="counseling">
+                <div class="procedure-small-tit">
+                    <div class="procedure-text">
+                        <h6>창업 상담</h6>
+                        <p>워시팩토리 창업 전문가의 1:1 맞춤 상담</p>
+                        <hr>
+                        <h5>01</h5>
+                    </div>
+                    <div class="procedure-img">
+                        <img src="asset/images/counseling.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis">
+                <div class="procedure-small-tit">
+                    <div class="procedure-text">
+                        <h6>입지/상권 분석</h6>
+                        <p>해당 지역에 적합한 상권 조사 및 분석</p>
+                        <hr>
+                        <h5>02</h5>
+                    </div>
+                    <div class="procedure-img">
+                        <img src="asset/images/analysis.png" alt="분석">
+                    </div>
+                </div>
+            </div>
+
+            <div class="installation">
+                <div class="procedure-small-tit">
+                    <div class="procedure-text">
+                        <h6>세탁 장비 설치</h6>
+                        <p>도면 검토 후 최적 설비 계획안 수정</p>
+                        <hr>
+                        <h5>03</h5>
+                    </div>
+                    <div class="procedure-img">
+                        <img src="asset/images/installation.png" alt="설치">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- procedure END -->
+
+    <section class="question">
+        <div class="question-inner">
+            <div class="question-text">
+                <h3>자주 묻는 질문</h3>
+            </div>
+            <div class="q">
+                <div class="q-inner-top">
+                    <p>세탁 경험이나 기술 없이도 창업할 수 있나요?</p>
+                    <img src="asset/images/icon/button_q1.svg" alt="버튼 누름">
+                </div>
+                <div class="q-inner-bottom">
+                    <p>네 가능합니다. 대부분의 세탁방 창업 모델은 자동화된 세탁 장비와 표준화된 운영 시스템을 기반으로 운영됩니다. <br>
+                        본사 교육 및 운영 매뉴얼을 통해 초보 창업자도 안정적으로 매장을 운영할 수 있도록 지원합니다.</p>
+                </div>
+            </div>
+            <div class="q1">
+                <div class="q-inner-top">
+                    <p class="p1">매장에서 발생한 세탁 클레임은 어떻게 처리하나요?</p>
+                    <img src="asset/images/icon/button_q2.svg" alt="버튼 안누름">
                 </div>
             </div>
         </div>

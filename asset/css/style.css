@@ -593,8 +593,9 @@ header{
 
 .equipment{
     padding-top: 110px;
+    padding-bottom: 100px;
 }
-.equipment h3{
+.equipment-title h3{
     text-align: center;
 }
 .equipment1{
@@ -606,4 +607,111 @@ header{
 .equipment-bottom{
     display: flex;
     gap: 250px;
+}
+.equipment-tit p{
+    font-size: 22px;
+    font-weight: 700;
+}
+.equipment-point{
+    font-size: 22px;
+    color: #0ac290;
+}
+.equipment-tit h3{
+    margin-bottom: 55px;
+}
+.equipment-bottom{
+    margin-top: 35px;
+}
+.equipment-left{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+.equipment-left p{
+    font-size: 22px;
+
+}
+.equipment-right{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+.equipment-right p {
+    font-size: 22px;
+}
+/* equipment END */
+
+.procedure{
+    background: #F5F6F7;
+    padding: 110px 0 100px;
+}
+.procedure-title{
+    text-align: center;
+    padding-bottom: 80px;
+}
+.procedure-title p{
+    font-size: 18px;
+    margin-top: 35px;
+}
+.procedure-inner{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.counseling, .analysis, .installation{
+    background: #fff;
+    padding: 65px 30px;
+    border-radius: 20px;
+}
+.procedure-text h6{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.procedure-text p{
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+.procedure-text h5{
+    font-size: 34px;
+    color: #0ac290;
+    margin: 35px 0;
+}
+/* procedure END */
+
+.question-text h3{
+    text-align: center;
+}
+.question-text{
+    margin-bottom: 80px;
+}
+.q{
+    width: 1090px;
+    margin: 0  auto;
+    border: #222 solid 1px;
+    border-left: none;
+    border-right: none;
+    padding: 32px 0;
+}
+.question-inner{
+    padding: 110px 0 138px;
+}
+.q-inner-top{
+    display: flex;
+    justify-content: space-between;
+}
+.q-inner-top p{
+    font-size: 22px;
+    padding-bottom: 34px;
+}
+.q-inner-bottom p{
+    font-size: 18px;
+}
+.q1{
+    width: 1090px;
+    margin: 0  auto;
+    border-bottom: #222 solid 1px;
+    padding: 32px 0;
+}
+.p1{
+    font-size: 22px;
 }
