@@ -128,6 +128,11 @@ header{
 
 @media (max-width:768px){
 
+    .kv{
+        height:auto;
+        padding-top: 4.375rem;
+    }
+
     .kv-header{
         display: flex;
         justify-content: space-between;
@@ -166,6 +171,13 @@ header{
     }
     .tit h4{
         font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .btn{
+        padding: 0 0 40px;
+    }
+    .btn button{
+        padding: 2px 46px;
     }
 
 }
@@ -177,21 +189,14 @@ header{
 /* 어바웃 영역 */
 .about-inner{
     width: 100%;
-    height: 701px;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: #F8FAFD;
     background: url(../images/ab_bg.png);
     background-repeat: no-repeat;
-    background-position: center center;
-}
-
-/* 어바웃 타이틀 */
-.about-tit{
-    width: 1314px;
-    display: flex;
-    justify-content: space-between;
+    background-position: center;
+    padding-top: 110px;
 }
 
 .ab-tit h3{
@@ -209,6 +214,22 @@ header{
 .point{
     color: #0ac290;
 }
+
+@media (max-width:768px){
+   .about-inner{
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     padding-top: 45px;
+     background-position:bottom;
+     background-size: 100% auto;
+   }
+   .ab-tit h3{
+    margin-bottom: 10px;
+   }
+   
+}
+
 /* ABOUT END */
 
 
@@ -567,4 +588,22 @@ header{
     display: flex;
     justify-content: center;
     gap: 22px;
+}
+/* washer END */
+
+.equipment{
+    padding-top: 110px;
+}
+.equipment h3{
+    text-align: center;
+}
+.equipment1{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding-top: 80px;
+}
+.equipment-bottom{
+    display: flex;
+    gap: 250px;
 }
